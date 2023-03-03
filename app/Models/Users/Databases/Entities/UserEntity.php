@@ -34,11 +34,9 @@ class UserEntity extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'account',
-        'image',
+        'username',
+        'email',
         'password',
-        'token',
         'created_at',
         'updated_at',
         'deleted_at',

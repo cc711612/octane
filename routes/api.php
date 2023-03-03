@@ -16,3 +16,4 @@ use App\Http\Controllers\Api\IndexController;
 */
 
 Route::get('/wallet/{wallet_id}', [IndexController::class, 'index']);
+Route::get('/user', [IndexController::class, 'user']);

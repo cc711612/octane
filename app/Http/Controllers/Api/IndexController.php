@@ -10,6 +10,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Wallets\Databases\Services\WalletApiService;
 use Illuminate\Support\Arr;
+use App\Models\Users\Databases\Entities\UserEntity;
 
 class IndexController extends Controller
 {
@@ -33,6 +34,14 @@ class IndexController extends Controller
         return response()->json([
             'status' => false,
             'data'   => $Wallet,
+        ]);
+    }
+
+    public function user()
+    {
+        return response()->json([
+            'status' => false,
+            'data'   => UserEntity::all(),
         ]);
     }
 }
